@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Waifu_ASP.NET</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Waifu_ASP.NET.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light box-shadow" style="background-color:#293d3d;">
+            <div class="container-fluid" style="margin-left:40px; margin-right:40px;">
+                <b>
+                    <a class="navbar-brand text-light" style="font-size:22pt;" asp-area="" asp-controller="Home" asp-action="Index">ShukauWaifu</a>
+                </b>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1 justify-content-end">
+                        <li class="nav-item" style="margin-top:auto; margin-bottom:auto;">
+                            <a class="nav-link text-light h3" style="margin-top:auto; margin-bottom:auto;" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item" style="margin-top:auto; margin-bottom:auto;">
+                            <a class="nav-link text-light h3" style="margin-top:auto; margin-bottom:auto;" asp-area="" asp-controller="Home" asp-action="Seach">Seach</a>
+                        </li>
+                        <li class="nav-item" style="margin-top:auto; margin-bottom:auto;">
+                            <a class="nav-link h3 text-light" style="margin-top:auto; margin-bottom:auto;" asp-area="" asp-controller="Home" asp-action="Privacy">
+                                <img src="~/images/avatars/no-register-user-ico.svg" class="rounded mx-auto d-block" alt="Avatar">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div>
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2023 - Waifu_ASP.NET - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

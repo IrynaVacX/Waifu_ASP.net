@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\Waifu-ASP.NET.props" />
+</Project>
